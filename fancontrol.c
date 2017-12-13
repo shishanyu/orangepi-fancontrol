@@ -3,26 +3,25 @@
 #include <stdlib.h>
 
 long getTemperature () {
-	FILE *fp;
+	FILE * fp;
 	long temperature;
 	char str[3];
-	fp = fopen("/sys/class/thermal/thermal_zone1/temp" , "r");
+	fp = fopen("/sys/class/thermal/thermal_zone1/temp", "r");
 	if(fp == NULL) {
 		return(0);
 	}
 	if(fgets (str, 60, fp)!=NULL ) {
-		temperature = strtol(fp, NULL, 10);
+		temperature = strtol(str, NULL, 10);
 		return temperature;
 	} else {
 		return 0;
 	}
 }
 
-
 int main (int argc, char* argv[])
 {
 	long temp;
-	puts(getTemperature ());
+	printf("%ld \n",getTemperature ());
 	wiringPiSetup ();
 	if(argc < 2){
 		pinMode (7, OUTPUT);
