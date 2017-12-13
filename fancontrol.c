@@ -20,7 +20,7 @@ long getTemperature (){
 int main (int argc, char* argv[])
 {
 	long temp;
-	put(getTemperature ());
+	puts(getTemperature ());
 	wiringPiSetup ();
 	if(argc < 2){
 		pinMode (7, OUTPUT);
