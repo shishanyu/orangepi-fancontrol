@@ -82,4 +82,5 @@ int main (int argc, char* argv[])
 			c_on = getSetting (temp);
 		}
 	}
+	return 0;
 }
