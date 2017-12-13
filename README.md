@@ -11,7 +11,10 @@ This outputs software PWM through a pin of your choosing. Also the program accep
 
 I have a 4 pin fan, that I recycled from an old iBook computer. The red pin goes to 5V, black pin to ground, yellow is PWM and green is the sensor (which I haven't gotten it to work yet).
 
-Note: not all commits and stuff will be in english but I'll try to translate the most important bits.
+You can compile it with something like:
+`gcc -Wall -o fancontrol fancontrol.c -lwiringPi`
+
+*Note: not all commits and stuff will be in english but I'll try to translate the most important bits.*
 
 # Control de ventilador para Orange Pi Zero
 Un control de ventilador que funciona con la Orange Pi Zero y plataformas parecidas a Arduino, produce PWM con software, requiere la librera Wiring Pi.
@@ -23,4 +26,5 @@ Esto saca un PWM hecho por software a traves del pin que elijas. Tambien el prog
 - medio (> 45 && < 60)
 - alto (todo lo demas)
 
-
+Lo puedes compilar con algo como:
+`gcc -Wall -o fancontrol fancontrol.c -lwiringPi`
