@@ -6,8 +6,8 @@
 int delays = 10;
 //Leave like that
 int c_ = 1;
-//How many delays you run a "reset"
-int c_refresh = 5;
+//How many delays you run a "reset" (ex. 500, with delays of 10msec are 5 secs)
+int c_refresh = 500;
 //Pin number
 int pin = 7;
 
