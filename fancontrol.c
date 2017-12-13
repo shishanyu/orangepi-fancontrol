@@ -2,10 +2,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+long getTemperature (){
+	FILE *fp;
+	long temperature;
+	char str[3];
+	fp = fopen("/sys/class/thermal/thermal_zone1/temp" , "r");
+	if(fp == NULL) {
+		return(0);
+	}
+	if(fgets (str, 60, fp)!=NULL ) {
+		temperature = strtol(fp, NULL, 10);
+		return temperature;
+	}
+}
+
 
 int main (int argc, char* argv[])
 {
 	long temp;
+	put(getTemperature ());
 	wiringPiSetup ();
 	if(argc < 2){
 		pinMode (7, OUTPUT);
