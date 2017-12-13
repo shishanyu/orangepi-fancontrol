@@ -50,8 +50,8 @@ int getSetting (long t){
 
 int main (int argc, char* argv[])
 {
-	//wiringPiSetup ();
-	//pinMode (7, OUTPUT);
+	wiringPiSetup ();
+	pinMode (7, OUTPUT);
 	long temp;
 	int c_on; //How many "on" beats should be per count
 	int c_on_c = 1; //Current "on" beat count
