@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-long getTemperature (){
+long getTemperature () {
 	FILE *fp;
 	long temperature;
 	char str[3];
@@ -13,6 +13,8 @@ long getTemperature (){
 	if(fgets (str, 60, fp)!=NULL ) {
 		temperature = strtol(fp, NULL, 10);
 		return temperature;
+	} else {
+		return 0;
 	}
 }
 
